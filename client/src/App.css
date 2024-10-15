@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+/* ---------------------- */
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+code {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #1e1e1e;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #b0b0b0;
+}
+
+li:hover {
+  background-color: #333333;
+  cursor: pointer;
+}

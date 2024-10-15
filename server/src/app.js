@@ -22,7 +22,15 @@ app.get("/users", async (_, res) => {
     return res.status(500).json({ msg: "error" });
   }
 });
-
+app.get("/notes", async (_, res) => {
+  try {
+    const notes = await db("notes");
+    return res.json(notes);
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ msg: "error" });
+  }
+});
 app.listen(PORT, () => {
   console.log("api running on port " + PORT);
 });
