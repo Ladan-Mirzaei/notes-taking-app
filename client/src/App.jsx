@@ -24,23 +24,23 @@ function App() {
     loadUsers();
   }, []);
 
-  useEffect(() => {
-    async function loadNotes() {
-      try {
-        const response = await fetch(`${API_URL}/notes`);
-        if (!response.ok) {
-          throw new Error("Data fetching error");
-        }
-        const data = await response.json();
-        setNotes(data);
-        console.log(data);
-      } catch (err) {
-        console.log(err);
-        alert("An error occured");
-      }
-    }
-    loadNotes();
-  }, []);
+  // useEffect(() => {
+  //   async function loadNotes() {
+  //     try {
+  //       const response = await fetch(`${API_URL}/notes`);
+  //       if (!response.ok) {
+  //         throw new Error("Data fetching error");
+  //       }
+  //       const data = await response.json();
+  //       setNotes(data);
+  //       console.log(data);
+  //     } catch (err) {
+  //       console.log(err);
+  //       alert("An error occured");
+  //     }
+  //   }
+  //   loadNotes();
+  // }, []);
 
   return (
     <>
@@ -56,13 +56,13 @@ function App() {
         ))}
       </ul>
 
-      <ul>
+      {/* <ul>
         {notes.map(({ id, title, description }) => (
           <li key={id}>
             {title} | {description}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </>
   );
 }

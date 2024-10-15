@@ -1,7 +1,7 @@
 CREATE TABLE notes (
   id SERIAL PRIMARY KEY,
-  tittel VARCHAR(255) NOT NULL,
-  descdescription VARCHAR(255) NOT NULL
+  title VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL
 );
 
 INSERT INTO notes (title, description) VALUES
