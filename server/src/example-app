@@ -1,0 +1,12 @@
+app.get("/books-cancel", async (req, res) => {
+  try {
+    const books = await db
+      .select()
+      .from("books")
+      .timeout(1000, { cancel: true }); // Cancel query if it exceeds 1000ms
+    res.json(books);
+  } catch (error) {
+    console.error("Error fetching books with cancel:", error);
+    res.status(500).json({ error: "Failed to fetch books with cancel" });
+  }
+});
